@@ -1,0 +1,25 @@
+%Autor: Simon Walker
+%Version: 1.0
+%Datum: 19.04.2020
+%Lizenz: CC BY-NC-SA
+
+\begin{circuitikz}
+	%	\HelpCords{-1}{-1}{7}{1}
+	
+	\draw
+	%Knoten
+	(0, 0) coordinate (n1)
+	(2, 0) coordinate (n2)
+	(4, 0) coordinate (n3)
+	(6, 0) coordinate (n4)
+	
+	%Nur zu Hilfszwecken
+	%	(n1) node[above] {$n1$}
+	%	(n2) node[above] {$n2$}
+	%	(n3) node[above] {$n3$}
+	%	(n4) node[above] {$n4$}
+	
+	(n1) to[C=$C$, o-] (n2) to [R=$R(\omega)$] (n3) 
+	to [american inductor=$L$, -o] (n4)
+	;
+\end{circuitikz}

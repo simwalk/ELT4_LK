@@ -1,0 +1,55 @@
+%Autor: Simon Walker
+%Version: 1.0
+%Datum: 19.04.2020
+%Lizenz: CC BY-NC-SA
+
+\begin{circuitikz}
+%	\HelpCords{-1}{-3}{5}{1}
+	
+	\draw
+	%Knoten
+	(0, -2) coordinate (n11)
+	(1, -2) coordinate (n12)
+	(1, -2.75) coordinate (n13)
+	(1, -1.25) coordinate (n14)
+	(3, -2.75) coordinate (n15)
+	(3, -1.25) coordinate (n16)
+	(3, -2) coordinate (n17)
+	(4, -2) coordinate (n18)
+	
+	(0, 0) coordinate (n21)
+	(2, 0) coordinate (n22)
+	(4, 0) coordinate (n23)
+	
+	
+	%Nur zu Hilfszwecken
+%	(n11) node[above] {$n11$}
+%	(n12) node[above] {$n12$}
+%	(n13) node[above] {$n13$}
+%	(n14) node[above] {$n14$}
+%	(n15) node[above] {$n15$}
+%	(n16) node[above] {$n16$}
+%	(n17) node[above] {$n17$}
+%	(n18) node[above] {$n18$}
+	
+%	(n21) node[above] {$n21$}
+%	(n22) node[above] {$n22$}
+%	(n23) node[above] {$n23$}
+	;
+	%Serie L
+	\draw[red]
+	(n21) to[R=$R$, o-, color=red] (n22) 
+	to [american inductor=$L$, -o, color=red] (n23)
+	;
+	
+	
+	%Parallel C
+	\draw[blue]
+	(n11) to[short, o-*, color=blue] (n12)
+	(n13) to[short, color=blue] (n14)
+	(n14) to[R=$R$, color=blue] (n16)
+	(n13) to[C=$C$, color=blue] (n15)
+	(n16) to[short, color=blue] (n15)
+	(n17) to[short, *-o, color=blue] (n18)
+	;
+\end{circuitikz}

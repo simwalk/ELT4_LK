@@ -1,0 +1,57 @@
+\kommentar{Reaktanzeintore (RET)}
+
+\begin{karte}{Was ist ein Reaktanzeintor?}
+	Ein Reaktanzeintor hat zwei Anschlüsse, besteht nur aus Reaktanzen und hat somit keine Wirkwiderstände.
+	\flushleft
+	\begin{minipage}{0.32\textwidth}
+		Beispiel:
+		\scalebox{.8}{\input{tikz/RET1.tex}}
+	\end{minipage}
+	\begin{minipage}{0.65\textwidth}
+		Es wird zwischen minimalen und nicht minimalen Eintoren unterschieden. Nicht minimale Eintore können auf ein minimales Eintor reduziert werden ohne das die Änderung von aussen bemerkt wird.
+	\end{minipage}\\[5pt]
+	Da die RET nur aus $L$ und $C$ bestehen hat das RET bei $\omega = 0$ und bei $\omega \rightarrow \infty$ jeweils eine Pol oder eine Nullstelle.
+\end{karte}
+
+\begin{karte}{Wie sieht der Reaktanzverlauf des folgenden RET aus und was für ein Typ hat das RET?\\[5pt]
+	\input{tikz/RET1.tex}}
+	\flushleft
+	\begin{minipage}{0.55\textwidth}
+		\input {tikz/RET1Verlauf.tex}
+	\end{minipage}
+	\begin{minipage}{0.4\textwidth}
+		Bei diesem Beispiel handelt sich um ein L-Typ
+	\end{minipage}
+	Als erstes wird das Verhalten des RET bei DC und bei sehr grossen Frequenzen analysiert. Für DC leiten beide Induktivitäten also ist dort eine NS. Für hohe Frequenzen sperrt die Erste Spule also ist dort eine PS.\\
+	Da es bei dieser Schaltung um ein minimales RET handelt und aus drei Bauteilen besteht, hat der Reaktanzverlauf drei Pol/Null stellen. Diese treten abwechselnd auf.
+\end{karte}
+
+\begin{karte}{Wie sieht der Reaktanzverlauf des folgenden RET aus?\\[5pt]
+		\input{tikz/RET2.tex}}
+	\centering
+	\input {tikz/RET2Verlauf.tex}\\
+	\flushleft
+	\vspace{-5pt}
+	Als erstes wird das Verhalten des RET bei DC und bei sehr grossen Frequenzen analysiert. Für DC leiten beide Induktivitäten also ist dort eine NS. Für hohe Frequenzen leiten Beide Kapazitäten also ist dort ebenfalls NS.\\
+	Da es bei dieser Schaltung um ein minimales RET handelt und aus vier Bauteilen besteht, hat der Reaktanzverlauf vier Pol/Null stellen. Diese treten abwechselnd auf.
+\end{karte}
+
+\begin{karte}{Ist folgendes RET ein minimales Eintor?\\[5pt]
+		\input{tikz/RET3.tex}}
+	Nein! Denn es hat ein Ring aus Induktivitäten. In diesem Ring kann ein Strom fliesen. Dieser Strom ist von aussen nicht sichtbar. Eine Induktivität kann ersatzlos gestrichen werden, wenn dementsprechend die anderen Induktivitäten angepasst werden. Danach ist von aussen kein Unterschied feststellbar.\\
+	\begin{center}
+		\input{tikz/RET3Ring.tex}
+	\end{center}
+\end{karte}
+
+\begin{karte}{Welche Eigenschaften eines RET sind in der Praxis am unwahrscheinlichsten?}
+	Es gibt zwei Probleme:
+	\begin{compactitem}
+		\item Impedanz wird nie 0 erreichen
+		\item Die Impedanz kann nicht undendlich gross werden.
+	\end{compactitem}
+	Allerdings wird die Impedanz sich nicht komplett anders verhalten als die Reaktanz.
+	\input{tikz/RET-Real.tex}
+\end{karte}
+
+

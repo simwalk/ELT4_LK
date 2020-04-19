@@ -1,0 +1,32 @@
+\kommentar{Schwingkreise}
+
+\begin{karte}{Wie verhält sich ein echter Kondensator?}
+	Ein Kondensator ist laut dem Ersatzschaltbild ein Serienschwingkreis und hat dementsprechend folgenden Verlauf:
+	\flushleft \begin{minipage}{0.48\textwidth}
+		\scalebox{.7}{\input{tikz/ErsatzschaltbildC-1.tex}}
+	\end{minipage}
+	\begin{minipage}{0.48\textwidth}
+		\input{tikz/RealesC-Impedanzverlauf.tex}
+	\end{minipage}\\[5pt]
+	Das Minimum der Impedanzfunktion ist rein reell und wird ESR (Equivalent Series Resistance) genant. Es enspricht dem Wert des Seriewiderstands bei der entsprechenden Frequenz.
+\end{karte}
+
+\begin{karte}{Wie verhält sich ein echten Widerstand?}
+	Das Ersatzschaltbild eines Widerstands hat entweder eine Spule in Serie (für  kleine $R$) oder einen Kondensator Parallel (für grosse $R$).
+	\flushleft \begin{minipage}{0.48\textwidth}
+		\scalebox{.85}{\input{tikz/ErsatzschaltbildR-1.tex}}
+	\end{minipage}
+	\begin{minipage}{0.48\textwidth}
+		\input{tikz/RealerR-Impedanzverlauf.tex}
+	\end{minipage}\\[5pt]
+\end{karte}
+
+\begin{karte}{Wie verhält sich eine echte Spule?}
+	Das Ersatzschaltbild einer Spule ist ein Parallelschwingkreis. Deshalb hat der Impedanzverlauf folgende Eigenschaften.
+	\flushleft \begin{minipage}{0.48\textwidth}
+		\input{tikz/ErsatzschaltbildL-1.tex}
+	\end{minipage}
+	\begin{minipage}{0.48\textwidth}
+		\input{tikz/RealeL-Impedanzverlauf.tex}
+	\end{minipage}\\[5pt]
+\end{karte}

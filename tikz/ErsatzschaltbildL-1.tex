@@ -1,0 +1,42 @@
+%Autor: Simon Walker
+%Version: 1.0
+%Datum: 19.04.2020
+%Lizenz: CC BY-NC-SA
+
+\begin{circuitikz}
+%	\HelpCords{-1}{-1}{5}{1}
+	
+	\draw
+	%Knoten
+	(0, 0) coordinate (n1)
+	(1, 0) coordinate (n2)
+	(1, -0.75) coordinate (n3)
+	(1, 0.75) coordinate (n4)
+	(3, -0.75) coordinate (n5)
+	(3, 0.75) coordinate (n6)
+	(3, 0) coordinate (n7)
+	(4, 0) coordinate (n8)
+	
+	
+	%Nur zu Hilfszwecken
+%	(n1) node[above] {$n1$}
+%	(n2) node[above] {$n2$}
+%	(n3) node[above] {$n3$}
+%	(n4) node[above] {$n4$}
+%	(n5) node[above] {$n5$}
+%	(n6) node[above] {$n6$}
+%	(n7) node[above] {$n7$}
+%	(n8) node[above] {$n8$}
+	
+	;	
+
+
+	\draw
+	(n1) to[short, o-*] (n2)
+	(n3) to[short] (n4)
+	(n4) to[american inductor=$L$] (n6)
+	(n3) to[C=$C$] (n5)
+	(n6) to[short] (n5)
+	(n7) to[short, *-o] (n8)
+	;
+\end{circuitikz}
