@@ -1,5 +1,59 @@
 \kommentar{Schwingkreise}
 
+\begin{karte}{Was ist ein Schwingkreis und welche Betriebsmodus gibt es?}
+	Ein Schwingkreis ist:\\
+	\begin{itemize}
+		\item ein Netzwerk aus Ohmischen und Kapazitive Bauteile
+		\item ein resonanzfähiges Netzwerk
+		\item Kann parallel oder seriell geschaltet werden
+	\end{itemize}
+	Es gibt 2 Betriebsmodus:
+	\begin{itemize}
+		\item Freie Schwingung 
+		\item Erzwungene Schwingung (Durch Quelle angeregt)
+	\end{itemize}
+\end{karte}
+
+\begin{karte}{Welche Frequenzen gibt es in einem Schwingkreis?}
+	Es gibt drei verschiedene Frequenzen in einem Schwingkreis:
+	\begin{itemize}
+		\item Eigenfrequenz $\omega_0$\\
+		(Resonanzfrequenz des verlustlosen Schwingkreis)
+		\item Resonanzfrequenz $\omega_r$\\
+		($Im(Z) = 0$, Reine Reelle Impedanzen und Admitanzen)
+		\item Extremalfrequenz $\omega_m$\\
+		(Frequenz bei welcher die Impedanz maximal oder minimal ist)
+	\end{itemize}
+\end{karte}
+
+\begin{karte}{Wie ist die Bandbreite eines Schwingkreises definiert?}
+	\textbf{(absolute) Bandbreite}:
+	\begin{equation*}
+		B = f^+ - f^- = \dfrac{\omega^+ - \omega^-}{2 \pi}
+	\end{equation*}
+	Die Bandbreite ist der Frequenzbereich, in welchem die Impedanz bzw. Admittanz des Resonators sich nur um den Faktor $\sqrt{2}$ vom nächsten (lokalen) Minimum $\omega_m$ unterscheidet.\\
+	Oder Formal ausgedrückt: \quad $|Z (\omega^{\pm})|=\sqrt{2}\cdot|Z(\omega_{m})|$\\
+	\textbf{relative Bandbreite}:
+	\begin{equation*}
+	B_{rel} = \frac{f^+ - f^-}{f_m} = \frac{\omega^+ - \omega^-}{\omega_m} =\frac{1}{Q_s}
+	\end{equation*}
+	Wobei $Q_s$ die Schwingkreisgüte ist.
+\end{karte}
+
+\begin{karte}{Was bedeutet Resonanz?}
+	\begin{itemize}
+		\item Aus der Akustik:\\
+		Verstärktes Mitschwingen eines schwingfähigen Systems
+		\item Die Resonanzfrequenz $\omega_r$ ist die Frequenz bei welcher die elektrische und magnetische Energie gleich gross sind $W_C = W_L$.
+	\end{itemize}
+	Bei der Resonanzfrequenz gilt folglich:
+	\begin{itemize}
+		\item $|X_C| = |X_L|$
+		\item $Im(Z) = 0$
+		\item $\tan (\varphi) = 0 \quad \rightarrow \quad \varphi = 0$
+	\end{itemize}
+\end{karte}
+
 \begin{karte}{Wie verhält sich ein echter Kondensator?}
 	Ein Kondensator ist laut dem Ersatzschaltbild ein Serienschwingkreis und hat dementsprechend folgenden Verlauf:
 	
