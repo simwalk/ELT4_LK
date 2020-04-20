@@ -1,8 +1,33 @@
 \kommentar{Frequenzabhängigkeit}
 
-\begin{karte}{Was ist die Güte und wie ist Sie definiert?}
+\begin{karte}{Was ist die Güte und wie ist sie definiert?}
 	Die Güte eines reaktiven Elements ist definiert als das Verhältnis seiner Reaktanz (Imaginärteil der Impedanz) und seiner Resistanz (Realteil der Impedanz):\\
 	\begin{equation*}
 		Q=\frac{|\operatorname{Im} Z|}{\operatorname{Re} Z}=\frac{|X|}{R}
 	\end{equation*}
+	Grundsätzlich ist ein Bauteil besser je grösser die Güte ist.
+	%TODO mit Theorie ergänzen ev. eine Grafik
+\end{karte}
+
+\begin{karte}{Was ist der Verlustfaktor $d$ und was sagt der Winkel $\delta$ aus?}
+	Der Verlustfaktor ist der Kehrwert der Güte.
+	\begin{equation*}
+		d = \frac{1}{Q} = \frac{\operatorname{Re}}{|\operatorname{Im} Z|} = \tan (\delta)
+	\end{equation*}
+	\begin{equation*}
+		\delta = \frac{\pi}{2} - \left|\varphi\right|
+	\end{equation*}
+	%TODO mit Theorie ergänzen ev. eine Grafik
+\end{karte}
+
+\begin{karte}{Was ist die Güte einer Induktivität und einer Kapazität?}
+	Für Induktivitäten:
+	\begin{equation*}
+		Q_L = \frac{X_L}{R_L} = \frac{\omega_L}{R_L} = \omega \tau_L
+	\end{equation*}
+	Für Kapazitäten:
+	\begin{equation*}
+		Q_C = \frac{|X_C|}{R_C} = \frac{1}{\omega R_C C} = \frac{1}{\omega \tau_C}
+	\end{equation*}
+	%TODO mit Theorie ergänzen ev. eine Grafik
 \end{karte}
