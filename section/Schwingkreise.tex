@@ -54,6 +54,42 @@
 	\end{itemize}
 \end{karte}
 
+\begin{karte}{Was ist der Unterschied zwischen einer herkömmlichen Güte (einer Reaktanz) und einer Kreisgüte?}
+	\textbf{Definitionen:}\\
+	\begin{minipage}[t]{0.48\textwidth}
+		Für eine Reaktanz:
+		\begin{equation*}
+			Q = \frac{|X|}{R}
+		\end{equation*}
+		Beispiel Spule:
+		\begin{equation*}
+			Q_L = \color{red}\frac{\omega L}{R}
+		\end{equation*}
+		\scalebox{.7}{\input{tikz/LR-Serie.tex}}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\textwidth}
+		Kreisgüte:
+		\begin{equation*}
+			Q = \frac{1}{B_{rel}}
+		\end{equation*}
+		Beispiel Serienschwingkreis:
+		\begin{equation*}
+			Q_s = \frac{1}{R} \sqrt{\frac{L}{C}} = \color{red}\frac{\omega_m L}{R}
+		\end{equation*}
+		\scalebox{.7}{\input{tikz/LRC-Serie.tex}}
+	\end{minipage}
+
+	Wenn die Güte für den Kondensator $Q_C \rightarrow \infty$ dann ist die Definition identisch!
+\end{karte}
+
+\begin{karte}{Wie ist die Güte über die Einergie  und Leistung definiert?}
+	Die Güte ist folgendermassen definiert:
+	\begin{equation*}
+		Q=\frac{\omega W}{P} = \frac{\text{gespeicherte Energie pro Periode}}{\text{Verlustleistung}}
+	\end{equation*}
+	Diese Definition gilt für die herkömmliche Güte so wie auch für die Kreisgüte.
+\end{karte}
+
 \begin{karte}{Wie verhält sich ein echter Kondensator?}
 	Ein Kondensator ist laut dem Ersatzschaltbild ein Serienschwingkreis und hat dementsprechend folgenden Verlauf:
 	
