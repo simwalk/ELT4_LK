@@ -1,0 +1,15 @@
+%Autor: Simon Walker
+%Version: 1.0
+%Datum: 24.04.2020
+%Lizenz: CC BY-NC-SA
+
+\begin{tikzpicture}[smooth, xscale=0.5, yscale=0.5]
+	%\HelpCords{0}{0}{5}{4}
+	
+	\foreach \x in {0.6, 1.2, ...,4}{
+		\draw[green] (\x, 0) arc (0:45:\x);	
+	}
+	
+	\draw[<->, thick] (3, 3) -- (0, 0) -- (4.5, 0) node[right] {$\vec{r}$};
+	\node[above right] at (3, 3) {$\vec{r}$};
+\end{tikzpicture}

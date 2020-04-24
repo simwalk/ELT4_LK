@@ -1,0 +1,29 @@
+%Autor: Simon Walker
+%Version: 1.0
+%Datum: 24.04.2020
+%Lizenz: CC BY-NC-SA
+
+\begin{tikzpicture}[smooth, xscale=0.4, yscale=0.4]
+%	\HelpCords{0}{-1}{9}{1}
+
+	\draw[thick] (-0.5, 0) -- (1, 0);
+	\draw[thick] (8, 0) -- (9.5, 0);
+	
+	\draw[thick] (1, 0) ellipse circle [x radius=0.6, y radius=1];
+	
+	\draw[thick, fill=white] (8.2, 0) ellipse circle [x radius=0.6, y radius=1];
+	\fill[white] (7,-1) rectangle (8.2,1);
+	
+	\foreach \x in {1.8, 2.4, ...,8}{
+		\draw[green] (\x, -1) arc (-30:30:2);	
+	}
+	
+	\draw[thick] (1, 1) -- (8.2, 1);
+	\draw[thick] (1, -1) -- (8.2, -1);
+	
+	\foreach \x in {2.5, 4.25, ..., 8}{
+		\draw[thick, blue] (\x, 0) ellipse circle [x radius=0.75, y radius=0.2];
+	}
+
+	\draw[thick, ->] (1, -1.8) -- (9, -1.8) node[right] {$z$};
+\end{tikzpicture}
