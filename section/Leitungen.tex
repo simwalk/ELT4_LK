@@ -20,6 +20,47 @@
 \end{karte}
 
 \begin{karte}{Was ist eine TEM-Welle?}
-	TEM steht für transversalelektomagnetisch. Eine TEM-Welle hat nur Komponenten, welche senkrecht zur Ausbreitungsrichtung sind.\\[10pt]
+	TEM steht für transversalelektomagnetisch. Eine TEM-Welle hat nur Komponenten, welche senkrecht zur Ausbreitungsrichtung sind. Im Bild ist $z$ die Ausbreitungsrichtung der Welle und steht senkrecht zu $\vec{E}$ und $\vec{H}$. \\[10pt]
 	\input{tikz/TEM-Welle.tex}
+\end{karte}
+
+\begin{karte}{Was bedeutet der Begriff Wellenimpedanz?}
+	Die Wellenimpedanz ist das Verhältnis zwischen Spannung und Strom der Welle. Achtung: Dies ist nicht gleich der gemessenen Spannung und Strom an einem gewissen Punkt $z$ in der Leitung!\\[5pt]
+	\input{tikz/Wellenimpedanz.tex} 
+\end{karte}
+
+\begin{karte}{Was bezeichnet man als Ausbreitungsgeschwindigkeit?}
+	Für uns ist meistens mit der Ausbreitungsgeschwindigkeit die Phasengeschwindigkeit gemeint.
+	\begin{equation*}
+		v = \frac{dz}{dt} = v_{ph} 
+	\end{equation*}
+	Am einfachsten wird geschaut wie sich der Peak der Welle fortbewegt.
+	\vspace{-10pt}
+	\begin{figure}[h]
+		\centering
+		\input{tikz/Phasengeschwindigkeit.tex}
+	\end{figure}
+\end{karte}
+
+\begin{karte}{Was ist die Ausbreitungskonstante?}
+	Die Ausbreitungskonstante $\gamma$ ist eine komplexe Grösse und hat die Einheit $Np/m + jrad/m$. $Np/m$ ist (Neper/Meter).\\[7pt]
+	\begin{minipage}[c]{0.38\textwidth}
+		\begin{equation*}
+		\gamma = \alpha + j \beta
+		\end{equation*}
+	\end{minipage}
+	\begin{minipage}[t]{0.68\textwidth}
+		\begin{tabular}{ccl}
+			$\gamma$ & => & Ausbreitungskonstante\\
+			$\alpha$ & => & Dämpfungskonstante\\
+			$\beta$  & => & Phasenkonstante
+		\end{tabular}
+	\end{minipage}\\[7pt]
+	
+	Eine Welle kann mittels der Ausbreitungskonstante definiert werden:
+	\begin{equation*}
+		U_+ e^{-\gamma z}
+	\end{equation*}
+	Wobei $U_+ e^{-\gamma z}$ eine Welle in die Positive $z$ Richtung ist mit der komplexen Amplitude $U_+=|U_+| e^{j \varphi_+}$
+	
 \end{karte}
