@@ -19,6 +19,28 @@
 	}
 \end{karte}
 
+\begin{karte}{Wie Sieht das Schema des Leitungsmodells aus?}
+	Das Leitungsmodell bezieht sich auf einen kurzen Leitungsausschnitt. Dadurch erhalten wir längenunabhängige Kenngrössen die sogenanten Leitungsbeläge.\\
+	%\divTwo{
+	%\begin{figure}[H]
+	%	\centering
+		\scalebox{.49}{\input{tikz/Leitungsmodell.tex}}\\[5pt]
+	%\end{figure}
+	%}{
+	\tiny
+	\renewcommand\arraystretch{1.7}
+	\begin{tabular}{cl}
+		$R'=\frac{dR}{dz}$ & Widerstandsbelag in $\Omega/m$\\
+		$L'=\frac{dL}{dz}$ & Induktivitätsbelag in $H/m$\\
+		$G'=\frac{dG}{dz}$ & Isolationsbelag in $S/m$\\
+		$C'=\frac{dC}{dz}$ & Kapazitätsbelag in $F/m$\\
+	\end{tabular}
+	\normalsize
+	%}
+
+
+\end{karte}
+
 \begin{karte}{Was ist eine TEM-Welle?}
 	TEM steht für transversalelektomagnetisch. Eine TEM-Welle hat nur Komponenten, welche senkrecht zur Ausbreitungsrichtung sind. Im Bild ist $z$ die Ausbreitungsrichtung der Welle und steht senkrecht zu $\vec{E}$ und $\vec{H}$. \\[10pt]
 	\input{tikz/TEM-Welle.tex}
@@ -62,5 +84,10 @@
 		U_+ e^{-\gamma z}
 	\end{equation*}
 	Wobei $U_+ e^{-\gamma z}$ eine Welle in die Positive $z$ Richtung ist mit der komplexen Amplitude $U_+=|U_+| e^{j \varphi_+}$
-	
+\end{karte}
+
+\begin{karte}{Wie entstehen durch Leitungen Verzerrungen und wie können diese verhindert werden?}
+	Eine Möglichkeit ist die \textbf{Dispersion}. Dies ist dann der Fall wenn $\beta(\omega)$, $\gamma(\omega)$, $Z(\omega)$, $v(\omega)$ Frequenzabhänig sind.\\
+	Eine andere Möglichkeit für Verzerrungen sind Reflexionen. Die Reflexionen treten immer Zeitverzögert auf ($\tau$).\\
+	\scalebox{.8}{\input{tikz/Reflexion.tex}}
 \end{karte}
