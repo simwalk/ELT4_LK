@@ -21,12 +21,7 @@
 
 \begin{karte}{Wie Sieht das Schema des Leitungsmodells aus?}
 	Das Leitungsmodell bezieht sich auf einen kurzen Leitungsausschnitt. Dadurch erhalten wir längenunabhängige Kenngrössen die sogenanten Leitungsbeläge.\\
-	%\divTwo{
-	%\begin{figure}[H]
-	%	\centering
-		\scalebox{.49}{\input{tikz/Leitungsmodell.tex}}\\[5pt]
-	%\end{figure}
-	%}{
+	\scalebox{.49}{\input{tikz/Leitungsmodell.tex}}\\[5pt]
 	\tiny
 	\renewcommand\arraystretch{1.7}
 	\begin{tabular}{cl}
@@ -36,9 +31,6 @@
 		$C'=\frac{dC}{dz}$ & Kapazitätsbelag in $F/m$\\
 	\end{tabular}
 	\normalsize
-	%}
-
-
 \end{karte}
 
 \begin{karte}{Was ist eine TEM-Welle?}
@@ -90,4 +82,67 @@
 	Eine Möglichkeit ist die \textbf{Dispersion}. Dies ist dann der Fall wenn $\beta(\omega)$, $\gamma(\omega)$, $Z(\omega)$, $v(\omega)$ Frequenzabhänig sind.\\
 	Eine andere Möglichkeit für Verzerrungen sind Reflexionen. Die Reflexionen treten immer Zeitverzögert auf ($\tau$).\\
 	\scalebox{.8}{\input{tikz/Reflexion.tex}}
+\end{karte}
+
+\begin{karte}{Weshalb und wann entstehen Reflexionen?}
+	%TODO mit Skript beantworten
+\end{karte}
+
+\begin{karte}{Was ist der Reflexionsfaktor?}
+	Der Reflexionsfaktor $\Gamma$ ist folgendermassen definiert:\\
+	\fbox{$\Gamma = \dfrac{U_-}{U_+} = \dfrac{Z-Z_{ref}}{Z+Z_{ref}}$} \quad $Z_{ref} \in \mathbb{R}$ und $Z \in \mathbb{C}$\\[5pt]
+	Dabei ist $U_+$ die vorlaufende Welle und $U_-$ ist die rücklaufende Welle, welche reflektiert wurde.\\
+	%TODO Was ist Z?
+	\begin{minipage}{0.49\textwidth}
+		\scalebox{.7}{\input{tikz/Reflexion2.tex}}
+	\end{minipage}
+	\begin{minipage}{0.49\textwidth}
+		Wenn $Z_A = Z_{ref}$ dann ist $\Gamma = 0$. Das heisst es gibt keine Rücklaufende Welle $U_- = 0$ und somit auch keine Reflexionen.
+	\end{minipage}
+	
+\end{karte}
+
+\begin{karte}{Wie sehen die Reflexionen bei folgender Anordnung aus?\\
+	\scalebox{.8}{\input{tikz/Reflexion3.tex}}}
+	Zum Zeitpunkt $t=0$ wird die Welle mit der Spannung $u_S$ losgeschickt. Zum Zeitpunkt $t=\tau$ kommt die Welle an der Last an. Da Die Last zu hochohmig ist, kann nur ein Bruchteil der Energie an der Last aufgenommen werden. Der Rest wird Reflektiert. Nach $2\tau$ kommt die Reflexion beim Sender an und führt zu einer Spannungsüberhöhung.\\
+	\begin{minipage}{0.59\textwidth}
+		\scalebox{.75}{\input{tikz/Reflexion3AW.tex}}
+	\end{minipage}
+	\begin{minipage}{0.39\textwidth}
+		\begin{align*}
+			\Gamma &= \frac{U_-}{U_+} = \frac{Z_L-Z_{ref}}{Z_L+Z_{ref}}\\
+			&= \frac{1k\Omega-100\Omega}{1k\Omega+100\Omega}\\
+			&= \frac{900\Omega}{1100\Omega} = 0.818
+		\end{align*}
+	\end{minipage}
+\end{karte}
+
+\begin{karte}{Wie sehen die Reflexionen bei folgender Anordnung aus?\\
+		\scalebox{.8}{\input{tikz/Reflexion4.tex}}}
+	Zum Zeitpunkt $t=0$ wird die Welle mit der Spannung $u_S$ losgeschickt. Zum Zeitpunkt $t=\tau$ kommt die Welle an der Last an. Da die Last zu niederohmig ist, wird eine Negative Welle mit $\Gamma u_S$ reflektiert. Nach $2\tau$ kommt die  beim Sender an und führt zu einer geringeren Spannung.\\
+	\begin{minipage}{0.59\textwidth}
+		\scalebox{.75}{\input{tikz/Reflexion4AW.tex}}
+	\end{minipage}
+	\begin{minipage}{0.39\textwidth}
+		\begin{align*}
+		\Gamma &= \frac{U_-}{U_+} = \frac{Z_L-Z_{ref}}{Z_L+Z_{ref}}\\
+		&= \frac{10\Omega-100\Omega}{10\Omega+100\Omega}\\
+		&= \frac{-90\Omega}{110\Omega} = -0.818
+		\end{align*}
+	\end{minipage}
+\end{karte}
+
+\begin{karte}{Wie sehen die Reflexionen bei folgender Anordnung aus?\\
+		\scalebox{.8}{\input{tikz/Reflexion5.tex}}}
+	Zum Zeitpunkt $t=0$ wird die Welle mit der Spannung $u_S$ losgeschickt. Allerdings wird diese sofort Reflektiert. Es kommt zu einer Spannungsüberhöhung an der Quelle ($Z_{ref}$ ist in diesem Fall $10\Omega$). Die Welle wird dann mit $u_S (1+\Gamma)$ losgeschickt und kommt dann zum Zeitpunkt $t=2\tau$ beim Empfänger an. Dort kommt es zu keiner Reflexion.\\
+	\begin{minipage}{0.59\textwidth}
+		\scalebox{.75}{\input{tikz/Reflexion5AW.tex}}
+	\end{minipage}
+	\begin{minipage}{0.39\textwidth}
+		\begin{align*}
+		\Gamma &= \frac{U_-}{U_+} = \frac{Z_L-Z_{ref}}{Z_L+Z_{ref}}\\
+		&= \frac{100\Omega-10\Omega}{100\Omega+10\Omega}\\
+		&= \frac{90\Omega}{110\Omega} = 0.818
+		\end{align*}
+	\end{minipage}
 \end{karte}

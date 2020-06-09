@@ -1,6 +1,6 @@
 %Autor: Simon Walker
 %Version: 1.0
-%Datum: 04.06.2020
+%Datum: 05.06.2020
 %Lizenz: CC BY-NC-SA
 
 \begin{circuitikz}
@@ -9,8 +9,7 @@
 	
 	\draw
 	%Knoten
-	(0, 0) coordinate (n1)
-	(0, 3) coordinate (n2)
+
 	(2, 3) coordinate (n3)
 	(6, 3) coordinate (n4)
 	(7, 3) coordinate (n5)
@@ -18,21 +17,19 @@
 	
 	
 	%Nur zu Hilfszwecken
-%	(n1) node[above] {$n1$}
-%	(n2) node[above] {$n2$}
+
 %	(n3) node[above] {$n3$}
 %	(n4) node[above] {$n4$}
 %	(n5) node[above] {$n5$}
 %	(n6) node[above] {$n6$}
 	
-	(n2) to[sV] (n1) node[rground]{}
-	(n2) to[R] (n3)
-	(n4) to[short] (n5) to[R=${Z_a}$] (n6) node[rground]{}
+
+	(n4) to[short] (n5) to[R=${Z_A}$] (n6) node[rground]{}
 	;
 	
 	%Leitung
 	\draw
-	(n3) to[short] ($(n3)+(0.5, 0)$)
+	($(n3)+(-0.5,0)$) to[short] ($(n3)+(0.5, 0)$)
 	(n4) to[short] ($(n4)+(-2, 0)$);
 	
 	\draw[fill=white] ($(n4)+(-0.5, 0)$) ellipse circle [x radius=0.3, y radius=0.5];
@@ -41,10 +38,8 @@
 	\draw ($(n3)+(0.5, -0.5)$) -- ($(n4)+(-0.5, -0.5)$);
 	\draw ($(n3)+(0.5, +0.5)$) -- ($(n4)+(-0.5, +0.5)$);
 	
-	
-	
 	\path ($(n3)+(0,-0.5)$) -- 
-	node[below] {$Z_0$}
+	node[below] {$Z_{ref}$}
 	($(n4)+(0,-0.5)$);
 	
 	\draw[dashed] ($(n4)+(0,1)$) -- ($(n4)+(0,-3.5)$);
