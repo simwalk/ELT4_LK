@@ -25,10 +25,17 @@
 %	(n5) node[above] {$n5$}
 %	(n6) node[above] {$n6$}
 	
-	(n2) to[sV=${u_S}$] (n1) node[rground]{}
+	(n2) to[esource=${u_S}$] (n1) node[rground]{}
 	(n2) to[R=${100\Omega}$] (n3)
 	(n4) to[short] (n5) to[R, l_=${1k\Omega}$, v^=${u_L}$] (n6) node[rground]{}
 	;
+	
+	%Step generator symbol
+	\path (n2) -- 
+	node{\begin{tikzpicture}
+		\draw (-0.25,-0.15) -- (0,-0.15) -- (0, 0.15) -- (0.25, 0.15);
+		\end{tikzpicture}}
+	(n1); 
 	
 	%Leitung
 	\draw
