@@ -1,0 +1,57 @@
+%Autor: Simon Walker
+%Version: 1.0
+%Datum: 17.06.2020
+%Lizenz: CC BY-NC-SA
+
+\begin{circuitikz}
+	%\HelpCords{0}{0}{8}{3}
+	
+	
+	\draw
+	%Knoten
+%	(0, 0) coordinate (n1)
+	(0, 3) coordinate (n2)
+	(1, 3) coordinate (n3)
+	(5, 3) coordinate (n4)
+	(6, 3) coordinate (n5)
+	(6, 0) coordinate (n6)	
+	
+	
+	%Nur zu Hilfszwecken
+%	(n1) node[above] {$n1$}
+%	(n2) node[above] {$n2$}
+%	(n3) node[above] {$n3$}
+%	(n4) node[above] {$n4$}
+%	(n5) node[above] {$n5$}
+%	(n6) node[above] {$n6$}
+	
+	(n2) to[short,o-] (n3)
+	(n4) to[short] (n5) to[R=${Z_a}$] (n6) node[rground]{}
+	;
+	
+	%Leitung
+	\draw
+	(n3) to[short] ($(n3)+(0.5, 0)$)
+	(n4) to[short] ($(n4)+(-2, 0)$);
+	
+	\draw[fill=white] ($(n4)+(-0.5, 0)$) ellipse circle [x radius=0.3, y radius=0.5];
+	\fill[white] ($(n3)+(0.5, -0.5)$) rectangle ($(n4)+(-0.5, 0.5)$);
+	\draw ($(n3)+(0.5, 0)$) ellipse circle [x radius=0.3, y radius=0.5];
+	\draw ($(n3)+(0.5, -0.5)$) -- ($(n4)+(-0.5, -0.5)$);
+	\draw ($(n3)+(0.5, +0.5)$) -- ($(n4)+(-0.5, +0.5)$);
+	
+	
+	
+	\path ($(n3)+(0,0.5)$) -- 
+	node[above] {$Z_0$}
+	($(n4)+(0,0.5)$);
+	
+	
+	\draw[<-, very thick] ($(n2)+(0,-1)$) -| ++(-0.8,-0.5) node[below] {$Z?$};
+	
+	\draw[blue,|<->|] ($(n3)-(0,0.8)$) -- 
+	node[below, blue] {$l/\lambda$}
+	($(n4)-(0,0.8)$);
+	
+
+\end{circuitikz}
