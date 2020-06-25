@@ -1,0 +1,71 @@
+%Autor: Simon Walker
+%Version: 1.0
+%Datum: 25.06.2020
+%Lizenz: CC BY-NC-SA
+
+
+\begin{circuitikz}
+%Symbol1
+\draw[thick] (-1, -0.8) rectangle (1, 0.8);
+\draw (-1, 0.5) to[short, -o] (-2, 0.5);
+%\draw[thick] (-1,0.5) -- (-2,0.5);
+%\draw[thick, fill=white] (-2,0.5) circle (0.1);
+\draw (-1, -0.5) to[short, -o] (-2, -0.5);
+%\draw[thick] (-1,-0.5) -- (-2,-0.5);
+%\draw[thick, fill=white] (-2,-0.5) circle (0.1);
+
+\draw[thick] (1,0.5) -- (2,0.5);
+\draw[thick, fill=white] (2,0.5) circle (0.1);
+\draw[thick] (1,-0.5) -- (2,-0.5);
+\draw[thick, fill=white] (2,-0.5) circle (0.1);
+
+%Strompfeile
+\draw[red, thick] (-1.5, 0.5) node[above, red] {$i_1$} ++(-0.15, 0.15) -- ++(0.15, -0.15) -- ++(-0.15, -0.15);
+
+\draw[red, thick] (1.5, 0.5) node[above, red] {$i_2$} ++(0.15, 0.15) -- ++(-0.15, -0.15) -- ++(0.15, -0.15);
+
+%Quelle
+\draw (-2,0.5) to[short] (-2,1) to[short] (-2.5, 1)	to[american voltage source] (-2.5 ,-1) to[short] (-2,-1) to[short] (-2, -0.5);
+
+%Amperemeter
+\draw (2,0.5) to[short] (2,1) to[short] (2.5, 1) to node[draw,circle,fill=white] {A} (2.5 ,-1) to[short] (2,-1) to[short] (2, -0.5);
+
+%Einkreisen
+\draw[green, very thick] (-1.5, 0.5) circle (0.5);
+\draw[blue, very thick] (1.5, 0.5) circle (0.5);
+
+
+\begin{scope}[shift={(7,0)}]
+	%Symbol2
+	\draw[thick] (-1, -0.8) rectangle (1, 0.8);
+	\draw (-1, 0.5) to[short, -o] (-2, 0.5);
+	%\draw[thick] (-1,0.5) -- (-2,0.5);
+	%\draw[thick, fill=white] (-2,0.5) circle (0.1);
+	\draw (-1, -0.5) to[short, -o] (-2, -0.5);
+	%\draw[thick] (-1,-0.5) -- (-2,-0.5);
+	%\draw[thick, fill=white] (-2,-0.5) circle (0.1);
+	
+	\draw[thick] (1,0.5) -- (2,0.5);
+	\draw[thick, fill=white] (2,0.5) circle (0.1);
+	\draw[thick] (1,-0.5) -- (2,-0.5);
+	\draw[thick, fill=white] (2,-0.5) circle (0.1);
+	
+	%Strompfeile
+	\draw[red, thick] (-1.5, 0.5) node[above, red] {$i_1$} ++(-0.15, 0.15) -- ++(0.15, -0.15) -- ++(-0.15, -0.15);
+	
+	\draw[red, thick] (1.5, 0.5) node[above, red] {$i_2$} ++(0.15, 0.15) -- ++(-0.15, -0.15) -- ++(0.15, -0.15);
+	
+	%Quelle
+	\draw (-2,0.5) to[short] (-2,1) to[short] (-2.5, 1)	to node[draw,circle,fill=white] {A} (-2.5 ,-1) to[short] (-2,-1) to[short] (-2, -0.5);
+	
+	%Amperemeter
+	\draw (2,0.5) to[short] (2,1) to[short] (2.5, 1) to[american voltage source] (2.5 ,-1) to[short] (2,-1) to[short] (2, -0.5);
+	
+	%Einkreisen
+	\draw[green, very thick] (1.5, 0.5) circle (0.5);
+	\draw[blue, very thick] (-1.5, 0.5) circle (0.5);
+	
+\end{scope}
+
+
+\end{circuitikz}

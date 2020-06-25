@@ -167,5 +167,29 @@
 		\item Eine Ortskurve des Komplexen Reflexionszeigers
 		\item Die Bilinear Transformation der Normierten Impedanz
 	\end{compactitem}
+	\centering
 	\scalebox{.4}{\input{tikz/SmithChartSmall.tex}}
+\end{karte}
+
+\begin{karte}{Was für eine Impedanz und Admittanz zeigt folgendes $50\Omega$ Smith-Chart?
+		\scalebox{.4}{\input{tikz/SmithChart1.tex}}}
+	\centering
+	\scalebox{.35}{\input{tikz/SmithChart1AW.tex}}
+	\flushleft \vspace{-12pt}
+	Aus dem Diagramm lässt sich die Impedanz und die Admittanz sehr einfach auslesen. Dazu muss den Kreisen gefolgt werden. Für die Impedanz (Blau):\\
+	$Z = Z_0 \cdot (0.5 + j0.5) = 50\Omega \cdot (0.5 + j0.5) = (25 + j25)\Omega$\\
+	Für die Admittanz (Grün) sind die Werte oben Negativ:\\
+	$Y = Y_0 \cdot (1 - j1) = \frac{1}{50\Omega} \cdot (1 - j1) = (20 - j20)mS$
+\end{karte}
+
+\begin{karte}{Ab wann muss eine Leitung als solches betrachtet werden?}
+	Entscheidend  ist die Länge der Leitung im Bezug zur Wellenlänge. Ist die Leitung viel kürzer als die Wellenlänge $l<<\lambda$ (bsp $l \approx \frac{\lambda}{100}$) haben wir keine Probleme und müssen die Leitung nicht als solches betrachten. Bei höheren Frequenzen oder längeren Leitungen wird es langsam kritisch $\color{red} l \approx \frac{\lambda}{20} \dots \frac{\lambda}{10}$. Dann muss die Leitung auch als Leitung betrachten werden. Die Grenze variiert stark mit den Qualitätsanforderungen der Schaltung.
+\end{karte}
+
+\begin{karte}{Weshalb ist der Einsatz von Koaxialkabeln elektrisch begrenzt?}
+	Koaxialkabel können wir ab DC bis in den GHz-Bereich benützen. Der Grund dafür ist, dass ab einer gewissen Frequenz der mittlere Umfang $U$ des Koaxialkabels nicht mehr sehr klein ist gegenüber $\lambda$.
+	Dann beginnt sich der Sogenannte 2. Mode auszubreiten. Die Überlagerungen der beiden Modes kann zu beliebigen Auslöschung und Verzerrungsefekte führen.
+	
+	\centering{\scalebox{.7}{\input{tikz/KoaxMode2.tex}}}
+			
 \end{karte}

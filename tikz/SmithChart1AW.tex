@@ -1,0 +1,25 @@
+%Autor: Simon Walker
+%Version: 1.0
+%Datum: 25.06.2020
+%Lizenz: CC BY-NC-SA
+
+
+\begin{tikzpicture}
+
+\begin{smithchart}[width=10cm,
+	smithchart mirrored,
+	yticklabel around circle,
+	xticklabel shift=-19pt]
+	\draw[green, thick, domain=-20:20,smooth,variable=\x, samples=100] plot (1,\x);
+	\draw[green, thick, domain=0:20,smooth,variable=\x, samples=100] plot (\x,1);
+\end{smithchart}
+
+\begin{smithchart}[width=10cm,
+	grid style={black},
+	yticklabel around circle*]
+	\draw[blue, thick, domain=-10:10,smooth,variable=\x, samples=100] plot (0.5,\x);
+	\draw[blue, thick, domain=0:20,smooth,variable=\x, samples=100] plot (\x,0.5);
+	\draw[red,fill=red] (0.5,0.5) circle (0.2cm);
+\end{smithchart}
+
+\end{tikzpicture}
