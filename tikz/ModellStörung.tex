@@ -1,0 +1,17 @@
+%Autor: Simon Walker
+%Version: 1.0
+%Datum: 29.06.2020
+%Lizenz: CC BY-NC-SA
+
+
+\begin{tikzpicture}
+	\draw[thick] (-0.5,-0.5) rectangle (0.5,0.5); 
+	\node at (0, 0) {\huge !};
+	\node[above] at (0, 0.5) {\large Quelle};
+	
+	\draw[thick] (3.5,-0.5) rectangle (4.5,0.5);
+	\node at (4, 0) {\huge ?};
+	\node[above] at (4, 0.5) {\large Senke};
+	
+	\draw[->, very thick] (0.5, 0) -- node[above] {\large Kopplung} (3.5, 0);
+\end{tikzpicture}
