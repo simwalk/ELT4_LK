@@ -1,1 +1,14 @@
 \kommentar{Leitungen}
+
+\begin{karte}{Komplettiere folgendes Schema wenn gilt $\Gamma = 0.6$\\($U_{1-}$, $I_{1-}$, $P_{1-}$, $U_{2+}$, $I_{2+}$, $P_{2+}$):\\[2pt]
+	\scalebox{0.62}{\input{tikz/Reflexionsfaktor.tex}}}
+	\begin{align*}
+		U_{1-} &= \Gamma \cdot U_{1+} = \mathbf{0.6V}\\
+		I_{1-} &= \Gamma \cdot I_{1+} = \mathbf{0.6A}\\
+		P_{1-} &= U_{1-} \cdot I_{1-} = \Gamma^2 \cdot P_{1+} = \mathbf{0.36W}\\
+		&\\
+		U_{2+} &= (1+\Gamma) \cdot U_{1+} = \mathbf{1.6V}\\
+		I_{2+} &= (1-\Gamma) \cdot I_{1+} = \mathbf{0.4A}\\
+		P_{2+} &= (1+\Gamma) \cdot (1-\Gamma) = (1 - \Gamma^2) \cdot P_{1+} = \mathbf{0.64W}
+	\end{align*}
+\end{karte}

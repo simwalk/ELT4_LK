@@ -1,0 +1,19 @@
+%Autor: Simon Walker
+%Version: 1.0
+%Datum: 15.07.2020
+%Lizenz: CC BY-NC-SA
+
+\begin{tikzpicture}
+	%\tikzset{arrow/.style={draw, ->, shorten >=3pt, shorten <=3pt}}
+	
+	\coordinate (n1) at (0, 0);
+	\coordinate (n2) at (3, 0);
+	\coordinate (n3) at (3, 2);
+	
+	\draw (n1) -- (n2) -- (n3) -- cycle;
+	
+	\draw[->, thick, blue] (n1)++(0, -0.2) -- node[below] {$G$: Konduktanz} ++(n2);
+	\draw[->, thick, blue] (n1)++(-0.05, 0.17) -- node[above, sloped] {$Y$: Admittanz} ++(n3);
+	\draw[->, thick, blue] (n2)++(0.2, 0) -- node[below, sloped] {$B$: Suszeptanz} ($(n3)+(0.2, 0)$);
+	
+\end{tikzpicture}

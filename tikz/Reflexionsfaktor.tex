@@ -1,0 +1,90 @@
+%Autor: Simon Walker
+%Version: 1.0
+%Datum: 16.07.2020
+%Lizenz: CC BY-NC-SA
+
+\begin{tikzpicture}[xscale = 0.8, yscale = 0.8]
+	
+	\coordinate (a1) at (0, 5);
+	\coordinate (a2) at (1, 5);
+	\coordinate (a3) at (4, 5);
+	\coordinate (a4) at (6, 5);
+	\coordinate (a5) at (8, 5);
+	\coordinate (a6) at (11, 5);
+	\coordinate (a7) at (12, 5);
+	
+	\coordinate (b1) at (0, 1);
+	\coordinate (b2) at (1, 1);
+	\coordinate (b3) at (4, 1);
+	\coordinate (b4) at (6, 1);
+	\coordinate (b5) at (8, 1);
+	\coordinate (b6) at (11, 1);
+	\coordinate (b7) at (12, 1);
+	
+	%Linien
+	\draw[thick] (a1) -- (a2) (a3) -- (a5) (a6) -- (a7);
+	\draw[thick] (b1) -- (b2) (b3) -- (b5) (b6) -- (b7);
+	
+	%Anschlüsse
+	\draw[fill=white] (a1) circle (0.07);
+	\draw[fill=white] (a4) circle (0.07);
+	\draw[fill=white] (a7) circle (0.07);
+	\draw[fill=white] (b1) circle (0.07);
+	\draw[fill=white] (b4) circle (0.07);
+	\draw[fill=white] (b7) circle (0.07);
+	
+	%Leitungen
+	\draw[thick] ($(a2)-(0, 0.25)$) rectangle ($(a3)+(0, 0.25)$);
+	\draw[thick] ($(a5)-(0, 0.25)$) rectangle ($(a6)+(0, 0.25)$);
+	\draw[thick] ($(b2)-(0, 0.25)$) rectangle ($(b3)+(0, 0.25)$);
+	\draw[thick] ($(b5)-(0, 0.25)$) rectangle ($(b6)+(0, 0.25)$);
+	
+	%gestrichelte Linie
+	\draw[dashed, thick] ($(a4)+(0, 1)$) -- ($(b4)-(0, 1)$);
+	
+	%Wellen Pfeile (Spannung)
+	\draw [blue] ($(a2)!0.5!(a3)$)++ (-0.8, 0.5) -- ++(0.3,0)
+	coordinate (p);
+	\begin{scope}[shift={(p)}]
+	\draw[blue, ->] plot[domain=0:540] ({1/540*\x}, {sin(\x)/8}) -- ++(0.3, 0);
+	\end{scope}
+	\node[blue] at ($(a2)!0.5!(a3)+(0,1)$) {$U_{1+} = 1V$};
+	 
+	\draw [blue] ($(a5)!0.5!(a6)$)++ (-0.8, 0.5) -- ++(0.3,0) coordinate (p);
+	\begin{scope}[shift={(p)}]
+	\draw[blue, ->] plot[domain=0:540] ({1/540*\x}, {sin(\x)/8}) -- ++(0.3, 0);
+	\end{scope}
+	\node[blue] at ($(a5)!0.5!(a6)+(0,1)$) {$U_{2+}= ?$};
+	 
+	\draw [blue, <-] ($(b2)!0.5!(b3)$)++ (-0.8, -0.5) -- ++(0.3,0) coordinate (p);
+	\begin{scope}[shift={(p)}]
+	\draw[blue] plot[domain=0:540] ({1/540*\x}, {sin(\x)/8}) -- ++(0.3, 0);
+	\end{scope}
+	\node[blue] at ($(b2)!0.5!(b3)-(0,1)$) {$U_{1-}= ?$};
+	 
+	 %Wellen Pfeile (Strom)
+	 \draw [red] ($(a2)!0.5!(a3)$)++ (-0.8, -0.5) -- ++(0.3,0) coordinate (p);
+	\begin{scope}[shift={(p)}]
+	\draw[red, ->] plot[domain=0:540] ({1/540*\x}, {sin(\x)/8}) -- ++(0.3, 0);
+	\end{scope}
+	\node[red] at ($(a2)!0.5!(a3)-(0,1)$) {$I_{1+} = 1A$};
+	 
+	\draw [red] ($(a5)!0.5!(a6)$)++ (-0.8, -0.5) -- ++(0.3,0) coordinate (p);
+	\begin{scope}[shift={(p)}]
+	\draw[red, ->] plot[domain=0:540] ({1/540*\x}, {sin(\x)/8}) -- ++(0.3, 0);
+	\end{scope}
+	\node[red] at ($(a5)!0.5!(a6)-(0,1)$) {$I_{2+}= ?$};
+	 
+	\draw [red] ($(b2)!0.5!(b3)$)++ (-0.8, +0.5) -- ++(0.3,0) coordinate (p);
+	\begin{scope}[shift={(p)}]
+	\draw[red, ->] plot[domain=0:540] ({1/540*\x}, {sin(\x)/8})-- ++(0.3, 0);
+	\end{scope}
+	\node[red] at ($(b2)!0.5!(b3)+(0,1)$) {$I_{1-}= ?$};
+	 
+	%Leistungspfeile
+	\draw[very thick, ->, brown] ($(a1)!0.5!(b1)+(0,-0.5)$) -- node[above] {$P_{1+} = 1W$} ++(1.5,0);
+	
+	\draw[very thick, ->, brown] ($(a4)!0.5!(b4)+(-0.4,-0.5)$) -- node[above] {$P_{1-} = ?$} ++(-1.5,0);
+	\draw[very thick, ->, brown] ($(a4)!0.5!(b4)+(0.4,-0.5)$) -- node[above] {$P_{2+}= ?$} ++(1.5,0);
+	
+\end{tikzpicture}
