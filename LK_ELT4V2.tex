@@ -50,6 +50,14 @@
 %\usepackage{cancel} %\cancel befehl kürzen %Farbe ändern mit \renewcommand\CancelColor{\color{red}}
 
 
+\newenvironment{tightcenter}{%
+	\setlength\topsep{0pt}
+	\setlength\parskip{0pt}
+	\begin{center}
+	}{%
+	\end{center}
+}
+
 \usepackage{pgfplots}
 \usepgfplotslibrary{fillbetween}
 
@@ -68,8 +76,6 @@
 	#2
 \end{minipage}
 }
-
-
 
 \begin{document}
 	\setcardpagelayout
@@ -93,8 +99,5 @@
 	\input{section/Ergänzungen/Leitungen.tex}
 	\input{section/Ergänzungen/Zweitore.tex}
 	\input{section/Ergänzungen/EMV.tex}
-	
-	
-
 	
 \end{document}

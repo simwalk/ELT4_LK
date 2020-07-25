@@ -1,1 +1,101 @@
 \kommentar{Zweitore}
+
+\begin{karte}{Beschreibe die Impedanzmatrix $\mathbf{Z}$. Wie werden die einzelne Elemente gemessen/berechnet?\\
+	\begin{equation*}
+		\left[\begin{array}{c}
+		U_1 \\ U_2
+		\end{array}\right]
+		= 
+		\underbrace{\left[\begin{array}{cc}
+			Z_{11} & Z_{12}\\
+			Z_{21} & Z_{22}
+		\end{array}\right]}_{\mathbf{Z}}
+		\left[\begin{array}{c}
+		I_1 \\ I_2
+		\end{array}\right]
+	\end{equation*}}
+	\renewcommand*{\arraystretch}{2.2}
+	\begin{tabular}{lcc}	
+		$\bullet$ Leerlauf-Eingangsimpedanz & \qquad & $Z_{11} = \left.\dfrac{U_1}{I_1}\right|_{I_2=0}$\\
+		$\bullet$ Eingangs-Koppel-/Kernimpedanz & \qquad & $Z_{12} = \left.\dfrac{U_1}{I_2}\right|_{I_1=0}$\\
+		$\bullet$ Ausgangs-Koppel-/Kernimpedanz & \qquad & $Z_{21} = \left.\dfrac{U_2}{I_1}\right|_{I_2=0}$\\
+		$\bullet$ Leerlauf-Ausgangsimpedanz & \qquad & $Z_{11} = \left.\dfrac{U_2}{I_2}\right|_{I_1=0}$\\
+	\end{tabular}
+\end{karte}
+
+\begin{karte}{Beschreibe die Admittanzmatrix $\mathbf{Y}$. Wie werden die einzelne Elemente gemessen/berechnet?\\
+		\begin{equation*}
+		\left[\begin{array}{c}
+		I_1 \\ I_2
+		\end{array}\right]
+		=
+		\underbrace{\left[\begin{array}{cc}
+		Y_{11} & Y_{12}\\
+		Y_{21} & Y_{22}
+		\end{array}\right]}_{\mathbf{Y}}
+		\left[\begin{array}{c}
+		U_1 \\ U_2
+		\end{array}\right]
+		\end{equation*}}
+	\renewcommand*{\arraystretch}{2.2}
+	\begin{tabular}{lcc}	
+		$\bullet$ Kurzschluss-Eingangsadmittanz & \qquad & $Y_{11} = \left.\dfrac{I_1}{U_1}\right|_{U_2=0}$\\
+		$\bullet$ Rückwirkungsleiterwert & \qquad & $Y_{12} = \left.\dfrac{I_1}{U_2}\right|_{U_1=0}$\\
+		$\bullet$ Steilheit & \qquad & $Y_{21} = \left.\dfrac{I_2}{U_1}\right|_{U_2=0}$\\
+		$\bullet$ Kurzschluss-Ausgangsadmittanz & \qquad & $Y_{11} = \left.\dfrac{I_2}{U_2}\right|_{U_1=0}$\\
+	\end{tabular}\\[3pt]
+	Die Admittanz Matrix lässt sich auch über die Impedanzmatrix berechnen:
+	\begin{tightcenter}
+		$\mathbf{Y} = \mathbf{Z}^{-1}$
+	\end{tightcenter}
+\end{karte}
+
+\begin{karte}{Beschreibe die Kettenmatrix $\mathbf{A}$. Wie werden die einzelne Elemente gemessen/berechnet?\\
+		\begin{equation*}
+		\left[\begin{array}{c}
+		U_1 \\ I_1
+		\end{array}\right]
+		= 
+		\underbrace{\left[\begin{array}{cc}
+			A_{11} & A_{12}\\
+			A_{21} & A_{22}
+			\end{array}\right]}_{\mathbf{A}}
+		\left[\begin{array}{c}
+		U_2 \\ -I_2
+		\end{array}\right]
+		\end{equation*}}
+	\renewcommand*{\arraystretch}{2.2}
+	{\small
+	\begin{tabular}{ll}	
+		$\bullet$ Reziproke Leerlauf-Spannungsübersetzung & $A_{11} = \left.\dfrac{U_1}{U_2}\right|_{I_2=0}$\\
+		$\bullet$ Kurzschluss-Kernimpedanz vorwärts & $A_{12} = \left.\dfrac{U_1}{-I_2}\right|_{U_2=0}$\\
+		$\bullet$ Leerlauf-Kernadmittanz vorwärts & $A_{21} = \left.\dfrac{I_1}{U_2}\right|_{I_2=0}$\\
+		$\bullet$ Reziproke Kurzschluss-Stromübersetzung & $A_{11} = \left.\dfrac{I_1}{-I_2}\right|_{U_2=0}$\\
+	\end{tabular}
+	}
+\end{karte}
+
+\begin{karte}{Beschreibe die Hybridmatrix $\mathbf{H}$. Wie werden die einzelne Elemente gemessen/berechnet?\\
+		\begin{equation*}
+		\left[\begin{array}{c}
+		U_1 \\ I_2
+		\end{array}\right]
+		= 
+		\underbrace{\left[\begin{array}{cc}
+			H_{11} & H_{12}\\
+			H_{21} & H_{22}
+			\end{array}\right]}_{\mathbf{H}}
+		\left[\begin{array}{c}
+		I_1 \\ U_2
+		\end{array}\right]
+		\end{equation*}}
+	\renewcommand*{\arraystretch}{2.2}
+	{\small 
+	\begin{tabular}{ll}	
+		$\bullet$ Kurzschluss-Eingangsimpedanz & $H_{11} = \left.\dfrac{U_1}{I_1}\right|_{U_2=0}$\\
+		$\bullet$ Leerlauf-Spannungsrückwirkung & $H_{12} = \left.\dfrac{U_1}{U_2}\right|_{I_1=0}$\\
+		$\bullet$ (Negative) Kurzschluss-Stromverstärkung & $H_{21} = \left.\dfrac{I_2}{I_1}\right|_{U_2=0}$\\
+		$\bullet$ Leerlauf-Ausgangsadmittanz & $H_{11} = \left.\dfrac{I_2}{U_2}\right|_{I_1=0}$\\
+	\end{tabular}
+	}
+\end{karte}
