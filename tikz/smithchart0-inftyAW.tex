@@ -1,0 +1,31 @@
+%Autor: Simon Walker
+%Version: 1.0
+%Datum: 24.07.2020
+%Lizenz: CC BY-NC-SA
+
+\begin{tikzpicture}
+
+\begin{smithchart}[width=10cm,
+smithchart mirrored,
+grid style={black!40!white},
+yticklabels={,,},
+xticklabels={,,}
+]
+\end{smithchart}
+
+\begin{smithchart}[width=10cm,
+grid style={black},
+yticklabels={,,},
+xticklabels={,,}
+]
+\draw[blue,fill=blue] (0,0) circle (0.2cm);
+\draw[red,fill=red] (900,0) circle (0.2cm);
+
+\end{smithchart}
+
+\node[above left] at (0,4.2cm) {\LARGE$Z=0$};
+\node[below left] at (0,4.2cm) {\LARGE$Y=\infty$};
+\node[above right] at (8.4,4.2cm) {\LARGE$Z=\infty$};
+\node[below right] at (8.4,4.2cm) {\LARGE$Y=0$};
+
+\end{tikzpicture}
